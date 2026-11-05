@@ -50,16 +50,28 @@ function App() {
   return (
     <div>
       <Header />
-      <Pizza />
+      <Menu />
+      <Footer />
     </div>
   );
 }
 function Header() {
   return <h1>Fast React Pizza Co.</h1>;
 }
-function Menu() {}
+function Menu() {
+  return (
+    <div>
+      <h2>Our Menu</h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+    </div>
+  );
+}
 function Footer() {
-  return;
+  return (
+    <footer>{new Date().toLocaleTimeString()} We Are Currently Open</footer>
+  );
 }
 function Pizza(name, description, src) {
   return (
