@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import "./index.css";
 const pizzaData = [
   {
     name: "Focaccia",
@@ -47,8 +47,11 @@ const pizzaData = [
 ];
 
 function App() {
+  let temporary = pizzaData;
+  console.log(temporary);
+
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
@@ -56,30 +59,62 @@ function App() {
   );
 }
 function Header() {
-  return <h1>Fast React Pizza Co.</h1>;
+  return (
+    <header className="header">
+      <h1>Fast React Pizza Co.</h1>
+    </header>
+  );
 }
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        name="Pizza Spinaci"
+        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
+        photoName="pizzas/spinaci.jpg"
+        price={15}
+      />
+      <Pizza
+        name="Pizza Salamin"
+        ingredients="Tomato, mozarella, and pepperoni"
+        photoName="pizzas/salamino.jpg"
+        price={15}
+      />
+      <Pizza
+        name="Pizza Prosciutto"
+        ingredients="Tomato, mozarella, ham, aragula, and burrata cheese"
+        photoName="pizzas/prosciutto.jpg"
+        price={18}
+      />
+    </main>
+  );
+}
+
+function Pizza(props) {
+  return (
+    <div className="pizza">
+      /
+      <img alt={props.name} src={props.photoName} />
+      <div>
+        <h1>{props.name}</h1>
+        <p>{props.ingredients}</p>
+        <span>{props.price}</span>
+      </div>
     </div>
   );
 }
+
 function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const status = hour >= openHour ? "open" : "close";
+  console.log(status);
+
   return (
-    <footer>{new Date().toLocaleTimeString()} We Are Currently Open</footer>
-  );
-}
-function Pizza(name, description, src) {
-  return (
-    <>
-      <h1>Pizza Spinaci</h1>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-      <img alt="Spinaci" src="pizzas/spinaci.jpg" />
-    </>
+    <footer className="footer">
+      {new Date().toLocaleTimeString()} We Are Currently {status}
+    </footer>
   );
 }
 
