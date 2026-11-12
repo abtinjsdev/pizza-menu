@@ -47,9 +47,6 @@ const pizzaData = [
 ];
 
 function App() {
-  let temporary = pizzaData;
-  console.log(temporary);
-
   return (
     <div className="container">
       <Header />
@@ -66,14 +63,24 @@ function Header() {
   );
 }
 function Menu() {
+  const pizzas = pizzaData;
+  const numPizzas = pizzas.length;
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza pizzaObj={pizza} key={pizza.name} />
-        ))}
-      </ul>
+      {numPizzas > 0 ? (
+        <ul className="pizzas">
+          {pizzas.map((pizza) => (
+            <Pizza pizzaObj={pizza} key={pizza.name} />
+          ))}
+        </ul>
+      ) : (
+        <p style={{ color: "red" }}>
+          All the foods on the menu are sold out now.
+          <br />
+          You can check the website later.
+        </p>
+      )}
       {/* <Pizza
         name="Pizza Spinaci"
         ingredients="Tomato, mozarella, spinach, and ricotta cheese"
@@ -112,12 +119,22 @@ function Pizza(props) {
 function Footer() {
   const hour = new Date().getHours();
   const openHour = 12;
-  const status = hour >= openHour ? "open" : "close";
+  const status = hour >= openHour ? true : false;
   console.log(status);
 
   return (
     <footer className="footer">
-      {new Date().toLocaleTimeString()} We Are Currently {status}
+      {status ? (
+        <div className="order">
+          <p>
+            We're Open now so you can order online and we are open till{" "}
+            {openHour}
+          </p>
+          <button className="btn">order</button>
+        </div>
+      ) : (
+        <p>We're close now you can check our website later</p>
+      )}
     </footer>
   );
 }
