@@ -14,7 +14,7 @@ const pizzaData = [
     ingredients: "Tomato and mozarella",
     price: 15,
     photoName: "pizzas/margherita.jpg",
-    soldOut: true,
+    soldOut: false,
   },
   {
     name: "Pizza Spinaci",
@@ -26,9 +26,9 @@ const pizzaData = [
   {
     name: "Pizza Funghi",
     ingredients: "Tomato, mozarella, mushrooms, and onion",
-    price: 12,
+    price: 24,
     photoName: "pizzas/funghi.jpg",
-    soldOut: false,
+    soldOut: true,
   },
   {
     name: "Pizza Salamino",
