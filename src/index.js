@@ -1,11 +1,11 @@
-import React from "react";
+ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 const pizzaData = [
   {
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
-    price: 6,
+    price: 20,
     photoName: "pizzas/focaccia.jpg",
     soldOut: false,
   },
@@ -14,7 +14,7 @@ const pizzaData = [
     ingredients: "Tomato and mozarella",
     price: 15,
     photoName: "pizzas/margherita.jpg",
-    soldOut: false,
+    soldOut: true,
   },
   {
     name: "Pizza Spinaci",
