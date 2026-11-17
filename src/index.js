@@ -70,7 +70,7 @@ function Menu() {
       <h2>Our Menu</h2>
       {numPizzas > 0 ? (
         <React.Fragment>
-          <p>Great Resturant</p>
+          <p>Fast React Pizza Co. is a modern pizza restaurant website built with React.js. It features a dynamic pizza menu, reusable components, product availability indicators, and time-based restaurant opening status. Developed using React, JavaScript, JSX, HTML, and CSS, the project demonstrates fundamental React concepts, including props, conditional rend</p>
 
           <ul className="pizzas">
             {pizzas.map((pizza) => (
