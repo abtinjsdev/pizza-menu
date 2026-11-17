@@ -167,10 +167,93 @@ body {
   background-color: #e9bb24;
 }
 
-/*
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
+@media (max-width: 900px) {
+  .pizzas {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 3.2rem;
+  }
 
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
-*/
+  .pizza {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 2rem 1.6rem 4rem;
+  }
+
+  .container {
+    gap: 3.2rem;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  .menu {
+    width: 100%;
+    gap: 2.4rem;
+  }
+
+  .menu h2 {
+    font-size: 2rem;
+  }
+
+  .menu > p {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .pizzas {
+    gap: 2.4rem;
+  }
+
+  .pizza {
+    gap: 1.6rem;
+  }
+
+  .pizza img {
+    width: 9rem;
+  }
+
+  .pizza h3 {
+    font-size: 1.7rem;
+  }
+
+  .pizza p {
+    font-size: 1.2rem;
+  }
+
+  .pizza span {
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .pizza {
+    gap: 1.2rem;
+  }
+
+  .pizza img {
+    width: 7.5rem;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .pizza h1 {
+    font-size: 1.5rem;
+  }
+}
