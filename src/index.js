@@ -7,7 +7,7 @@ const pizzaData = [
     ingredients: "Bread with italian olive oil and rosemary",
     price: 65,
     photoName: "pizzas/focaccia.jpg",
-    soldOut: true,
+    soldOut: false,
   },
   {
     name: "Pizza Margherita",
