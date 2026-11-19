@@ -14,7 +14,7 @@ const pizzaData = [
     ingredients: "Tomato and mozarella",
     price: 15,
     photoName: "pizzas/margherita.jpg",
-    soldOut: true,
+    soldOut: false,
   },
   {
     name: "Pizza Spinaci",
